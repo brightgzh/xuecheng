@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7ab7a02-7efb-49df-bdd8-a62a01d3d3cc" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-base/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-base/src/main/java/com/xuecheng/base/conf/LocalDateTimeConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-base/src/main/java/com/xuecheng/base/model/PageParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-base/src/main/java/com/xuecheng/base/model/PageResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-base/src/test/java/com/xuecheng/XuechengPlusBaseApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/src/main/java/com/xuecheng/XuechengPlusContentApiApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/src/main/java/com/xuecheng/content/CourseBaseInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/src/main/resources/log4j2-dev.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/src/test/java/com/xuecheng/XuechengPlusContentApiApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-model/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-model/src/main/java/com/xuecheng/XuechengPlusContentModelApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-model/src/main/java/com/xuecheng/dto/QueryCourseParamsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-model/src/test/java/com/xuecheng/XuechengPlusContentModelApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/src/main/java/com/xuecheng/XuechengPlusContentServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/src/test/java/com/xuecheng/XuechengPlusContentServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-parent/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\apache-maven-3.8.6\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../maven/apache-maven-3.8.6" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.8.6\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2mKJp2SRCPxB5yZBvuXT3d2WKF9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/xuecheng-plus/xuecheng-plus-project/xuecheng-plus-base/src/main/java/com/xuecheng/base/conf",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.26126954",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xuecheng-plus\xuecheng-plus-project\xuecheng-plus-base\src\main\java\com\xuecheng\base\conf" />
+      <recent name="D:\xuecheng-plus\xuecheng-plus-project\xuecheng-plus-content\xuecheng-plus-content-api\src\main\resources" />
+      <recent name="D:\xuecheng-plus\xuecheng-plus-project\xuecheng-plus-content\xuecheng-plus-content-model\src\main\java\com\xuecheng" />
+      <recent name="D:\xuecheng-plus\xuecheng-plus-project\xuecheng-plus-parent" />
+      <recent name="D:\xuecheng-plus\xuecheng-plus-project" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="XuechengPlusContentApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="xuecheng-plus-content-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xuecheng.XuechengPlusContentApiApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xuecheng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.XuechengPlusContentApiApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="c7ab7a02-7efb-49df-bdd8-a62a01d3d3cc" name="更改" comment="" />
+      <created>1726819515343</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726819515343</updated>
+      <workItem from="1726819516503" duration="1051000" />
+      <workItem from="1726820596768" duration="10961000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
