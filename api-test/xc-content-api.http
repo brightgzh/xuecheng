@@ -1,0 +1,40 @@
+###查询课程信息
+POST {{content_host}}/content/course/list?pageNo=1&pageSize=2
+Content-Type: application/json
+
+{
+  "auditStatus": "202004",
+  "courseName": "python",
+  "publishStatus": ""
+}
+
+### 查询课程树列表
+GET http://localhost:63040/content/course-category/tree-nodes
+
+
+### 新增课程接口
+POST http://localhost:63040/content/course
+Content-Type: application/json
+
+{
+  "charge": "201000",
+  "price": 0,
+  "originalPrice":0,
+  "qq": "22333",
+  "wechat": "223344",
+  "phone": "13333333",
+  "validDays": 365,
+  "mt": "1-1",
+  "st": "1-1-1",
+  "name": "",
+  "pic": "",
+  "teachmode": "200002",
+  "users": "初级人员",
+  "tags": "",
+  "grade": "204001",
+  "description": ""
+}
+
+###
+GET http://localhost:63040/content/course/40
+Content-Type: application/json
