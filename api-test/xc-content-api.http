@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 ### 查询课程树列表
-GET http://localhost:63040/content/course-category/tree-nodes
+GET {{content_host}}/content/course-category/tree-nodes
 
 
 ### 新增课程接口
@@ -38,3 +38,122 @@ Content-Type: application/json
 ###
 GET http://localhost:63040/content/course/40
 Content-Type: application/json
+
+###添加课程老师
+POST http://localhost:63040/content/courseTeacher
+Content-Type: application/json
+
+{
+  "courseId": 75,
+  "teacherName": "汕头大学郭老师",
+  "position": "教师职位",
+  "introduction": "教师简介"
+}
+
+###修改教师
+PUT http://localhost:63040/content/courseTeacher
+Content-Type: application/json
+
+{
+  "id": 24,
+  "courseId": 75,
+  "teacherName": "王老师",
+  "position": "教师职位",
+  "introduction": "教师简介",
+  "photograph": null,
+  "createDate": null
+}
+
+### 上传文件
+POST {{media_host}}/media/upload/coursefile
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="filedata"; filename="1.jpg"
+Content-Type: application/octet-stream
+
+< D:\photo\img2.jpeg
+
+
+### 添加课程索引
+POST {{search_host}}/search/index/course
+Content-Type: application/json
+
+{
+  "charge" : "201000",
+  "companyId" : 100000,
+  "companyName" : "北京黑马程序员",
+  "createDate" : "2022-09-25 09:36:11",
+  "description" : "《Java编程思想》是2007年6月1日机械工业出版社出版的图书，作者是埃克尔，译者是陈昊鹏。主要内容本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。从本书获得的各项大奖以及来自世界各地的读者评论中，不难看出这是一本经典之作",
+  "grade" : "204001",
+  "id" : 102,
+  "mt" : "1-3",
+  "mtName" : "编程开发",
+  "name" : "Java编程思想",
+  "originalPrice" : 200.0,
+  "pic" : "/mediafiles/2022/09/20/1d0f0e6ed8a0c4a89bfd304b84599d9c.png",
+  "price" : 100.0,
+  "remark" : "没有备注",
+  "st" : "1-3-2",
+  "stName" : "Java语言",
+  "status" : "203002",
+  "tags" : "没有标签",
+  "teachmode" : "200002",
+  "validDays" : 222
+}
+
+### 密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=zhangsan&password=123
+
+### 密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=zhangsan&password=123
+
+### 授权码模式
+### 第一步申请授权码(浏览器请求)/oauth/authorize?client_id=c1&response_type=code&scope=all&redirect_uri=http://www.51xuecheng.cn
+### 第二步申请令牌
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=authorization_code&code=h2pEHe&redirect_uri=http://www.51xuecheng.cn
+
+### 密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=zhangsan&password=123
+
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzMSJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NjQzMzE2OTUsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImU5ZDNkMGZkLTI0Y2ItNDRjOC04YzEwLTI1NmIzNGY4ZGZjYyIsImNsaWVudF9pZCI6ImMxIn0.-9SKI-qUqKhKcs8Gb80Rascx-JxqsNZxxXoPo82d8SM",
+  "token_type": "bearer",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicmVzMSJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJhdGkiOiJlOWQzZDBmZC0yNGNiLTQ0YzgtOGMxMC0yNTZiMzRmOGRmY2MiLCJleHAiOjE2NjQ1ODM2OTUsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImRjNTRjNTRkLTA0YTMtNDIzNS04MmY3LTFkOWZkMmFjM2VmNSIsImNsaWVudF9pZCI6ImMxIn0.Wsw1Jc-Kd_GFqEugzdfoSsMY6inC8OQsraA21WjWtT8",
+  "expires_in": 7199,
+  "scope": "all",
+  "jti": "e9d3d0fd-24cb-44c8-8c10-256b34f8dfcc"
+}
+
+
+### 密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=stu1&password=111111
+
+###校验jwt令牌
+POST {{auth_host}}/auth/oauth/check_token?
+    token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJiaXJ0aGRheVwiOlwiMjAyMi0wOS0yOFQxOToyODo0NlwiLFwiY3JlYXRlVGltZVwiOlwiMjAyMi0wOS0yOFQwODozMjowM1wiLFwiaWRcIjpcIjUwXCIsXCJuYW1lXCI6XCLlrabnlJ8xXCIsXCJuaWNrbmFtZVwiOlwi5aSn5rC054mbXCIsXCJwYXNzd29yZFwiOlwiJDJhJDEwJDBwdDdXbGZUYm5QRFRjV3RwLy4yTXU1Q1RYdm9obk5RaFI2MjhxcTRSb0tTYzBkR0FkRWdtXCIsXCJzZXhcIjpcIjFcIixcInN0YXR1c1wiOlwiMVwiLFwidXNlcm5hbWVcIjpcInN0dTFcIixcInVzZXJwaWNcIjpcImh0dHA6Ly9maWxlLnh1ZWNoZW5nLXBsdXMuY29tL2RkZGZcIixcInV0eXBlXCI6XCIxMDEwMDFcIn0iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNzI5MDczNTU1LCJhdXRob3JpdGllcyI6WyJ0ZXN0Il0sImp0aSI6IjNmMjVmOWU0LWI4M2MtNDg1OS04NWZhLWJjYjBjYWU0MTJjZSIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.W1V3kBQ9w1_e4lwJjALyqaSKW19luxpN9otSMyV_qSs
+
+### 查询课程信息
+GET http://localhost:63040/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJiaXJ0aGRheVwiOlwiMjAyMi0wOS0yOFQxOToyODo0NlwiLFwiY3JlYXRlVGltZVwiOlwiMjAyMi0wOS0yOFQwODozMjowM1wiLFwiaWRcIjpcIjUwXCIsXCJuYW1lXCI6XCLlrabnlJ8xXCIsXCJuaWNrbmFtZVwiOlwi5aSn5rC054mbXCIsXCJwYXNzd29yZFwiOlwiJDJhJDEwJDBwdDdXbGZUYm5QRFRjV3RwLy4yTXU1Q1RYdm9obk5RaFI2MjhxcTRSb0tTYzBkR0FkRWdtXCIsXCJzZXhcIjpcIjFcIixcInN0YXR1c1wiOlwiMVwiLFwidXNlcm5hbWVcIjpcInN0dTFcIixcInVzZXJwaWNcIjpcImh0dHA6Ly9maWxlLnh1ZWNoZW5nLXBsdXMuY29tL2RkZGZcIixcInV0eXBlXCI6XCIxMDEwMDFcIn0iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNzI5MDc0MjEyLCJhdXRob3JpdGllcyI6WyJ0ZXN0Il0sImp0aSI6Ijc5MGU5MGY0LWQ0OTEtNGJmNS1hNjYxLTM0MGY1OGVkMzAyZCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.9jLfiiVTroBxv_S4XOZiti542x7SXKNxGfXyYyINzZA
+### 通过网关访问资源服务
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE3MjkwNzE5ODUsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImUyOThjNjljLTU2MWItNDk1Mi05ODhlLTJlZjEyMzU4ODQzMCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.o_3zO5wjgb-F-XNqkLZeTw_t8KsUHlFjEzsFsr7ufZs
+
+### 密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=stu1&password=111111
+
+################扩展认证请求参数后######################
+###密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username={"username":"stu1","authType":"password","password":"111111"}
+
+
+### 申请验证码
+POST {{checkcode_host}}/checkcode/pic
+
+### 校验验证码
+POST {{checkcode_host}}/checkcode/verify?key=checkcode:148271d7781a48349d52f3f7fd6536d4
+
+### 查询支付结果
+GET {{orders_host}}/orders/payresult?payNo=1849715829076582400
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJiaXJ0aGRheVwiOlwiMjAyMi0wOS0yOFQxOToyODo0NlwiLFwiY29tcGFueUlkXCI6XCIxMjMyMTQxNDI1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJpZFwiOlwiNTBcIixcIm5hbWVcIjpcIuWtpueUnzFcIixcIm5pY2tuYW1lXCI6XCLlpKfmsLTniZtcIixcInBlcm1pc3Npb25zXCI6W1wieGNfc3lzbWFuYWdlclwiLFwieGNfc3lzbWFuYWdlcl91c2VyXCIsXCJ4Y19zeXNtYW5hZ2VyX3VzZXJfYWRkXCIsXCJ4Y19zeXNtYW5hZ2VyX3VzZXJfZWRpdFwiLFwieGNfc3lzbWFuYWdlcl91c2VyX3ZpZXdcIixcInhjX3N5c21hbmFnZXJfdXNlcl9kZWxldGVcIixcInhjX3N5c21hbmFnZXJfZG9jXCIsXCJ4Y19zeXNtYW5hZ2VyX2xvZ1wiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZVwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9hZGRcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYmFzZVwiLFwieGNfc3lzbWFuYWdlcl9jb21wYW55XCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2xpc3RcIl0sXCJzZXhcIjpcIjFcIixcInN0YXR1c1wiOlwiMVwiLFwidXNlcm5hbWVcIjpcInN0dTFcIixcInVzZXJwaWNcIjpcImh0dHA6Ly9maWxlLnh1ZWNoZW5nLXBsdXMuY29tL2RkZGZcIixcInV0eXBlXCI6XCIxMDEwMDFcIn0iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNzI5ODQ4OTAxLCJhdXRob3JpdGllcyI6WyJ4Y19zeXNtYW5hZ2VyX2RvYyIsInhjX3N5c21hbmFnZXJfdXNlcl92aWV3IiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZSIsInhjX3N5c21hbmFnZXJfdXNlcl9hZGQiLCJ4Y19zeXNtYW5hZ2VyX2NvbXBhbnkiLCJ4Y19zeXNtYW5hZ2VyX3VzZXJfZGVsZXRlIiwieGNfc3lzbWFuYWdlcl91c2VyIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9iYXNlIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9saXN0IiwieGNfc3lzbWFuYWdlciIsInhjX3N5c21hbmFnZXJfbG9nIiwieGNfc3lzbWFuYWdlcl91c2VyX2VkaXQiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2FkZCJdLCJqdGkiOiJhYTgyYTc1YS0yYmU4LTQ0NmUtYTRiOC1lZWYxYjU3NTgyZTAiLCJjbGllbnRfaWQiOiJYY1dlYkFwcCJ9.hlYD8V1bVCeHv4DSwIP5aqRYAuv9-eEJrYB5b8KBL9Y
